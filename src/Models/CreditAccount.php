@@ -22,4 +22,7 @@ class CreditAccount extends Account
 
         $this->balance -= $amount;
     }
+    public function getCreditLimit(): float {
+        return $this->creditLimit;
+    }
 }

@@ -21,4 +21,7 @@ class SavingsAccount extends Account
         }
         $this->balance -= $amount;
     }
+    public function getInterestRate(): float {
+        return $this->interestRate;
+    }
 }
