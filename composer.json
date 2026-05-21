@@ -1,0 +1,17 @@
+{
+    "name": "maksym/solid-bank-cli",
+    "description": "A CLI banking system in PHP featuring multiple account types, fund transfers, and transaction history. Architected using SOLID principles, Repository/Service patterns, custom exceptions, and JSON-based data persistence.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Maksym Masliak",
+            "email": "maksym.masliak@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Bank\\": "src/"
+        }
+    }
+}
