@@ -1,0 +1,16 @@
+{
+    "SAV-1": {
+        "id": "SAV-1",
+        "balance": 849.5,
+        "currency": "UAH",
+        "type": "savings",
+        "interestRate": 0.05
+    },
+    "CRED-1": {
+        "id": "CRED-1",
+        "balance": 150.5,
+        "currency": "UAH",
+        "type": "credit",
+        "creditLimit": 5000
+    }
+}
