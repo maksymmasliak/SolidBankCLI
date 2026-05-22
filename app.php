@@ -3,13 +3,18 @@ declare(strict_types=1);
 
 use Bank\Services\BankService;
 use Bank\Repositories\JsonAccountRepository;
+use Bank\Loggers\FileLogger;
 use Bank\Models\SavingsAccount;
 use Bank\Models\CreditAccount;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
+// 1. Ініціалізуємо конкретні реалізації сховища та логера
 $repository = new JsonAccountRepository(__DIR__ . '/data/database.json');
-$bankService = new BankService($repository);
+$logger = new FileLogger(__DIR__ . '/data/transactions.log');
+
+// 2. Передаємо їх у сервіс (Dependency Injection)
+$bankService = new BankService($repository, $logger);
 
 if (!isset($argv[1])) {
     echo "Помилка: введіть команду (наприклад, seed або transfer)\n";
